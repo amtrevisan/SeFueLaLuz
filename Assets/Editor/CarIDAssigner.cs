@@ -7,7 +7,7 @@ public class CarIDAssigner : MonoBehaviour
     public static void AssignCarIDs()
     {
         // Find all CarInteraction objects in the scene
-        CarInteraction[] cars = FindObjectsOfType<CarInteraction>();
+        CarInteraction[] cars = Object.FindObjectsByType<CarInteraction>(FindObjectsSortMode.None);
         
         // Sort cars by their position in the hierarchy (top to bottom)
         System.Array.Sort(cars, (car1, car2) => car1.transform.GetSiblingIndex().CompareTo(car2.transform.GetSiblingIndex()));

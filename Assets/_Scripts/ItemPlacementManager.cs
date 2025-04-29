@@ -15,13 +15,11 @@ public class ItemPlacementManager : MonoBehaviour
 
     private List<int> selectedCarIDs = new List<int>();
 
-    void Start()
-    {
-        AssignRandomCars();
-    }
-
     void AssignRandomCars()
     {
+        string[] items = { "GasCan", "Fuse", "Wrench" };
+        Shuffle(items);
+
         List<CarMarkerPair> pool = new List<CarMarkerPair>(eligibleCars);
         
         for (int i = 0; i < numberOfItems; i++)
@@ -40,11 +38,26 @@ public class ItemPlacementManager : MonoBehaviour
                 if (car.CarID == selected.carID)
                 {
                     car.hasItem = true;
+                    car.itemName = items[i];
                     break;
                 }
             }
 
             pool.RemoveAt(randIndex);
         }
+    }
+
+    void Shuffle<T>(T[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            int rand = Random.Range(i, array.Length);
+            (array[i], array[rand]) = (array[rand], array[i]);
+        }
+    }
+
+    void Start()
+    {
+        AssignRandomCars();
     }
 }

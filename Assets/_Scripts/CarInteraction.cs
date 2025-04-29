@@ -6,6 +6,9 @@ public class CarInteraction : MonoBehaviour
     public int CarID; // now manually set in Inspector
     public bool hasItem = false;
 
+    [Header("Item")]
+    public string itemName; // "GasCan", "Fuse", or "Wrench"
+
     [Header("UI & Interaction")]
     public GameObject mapMarker; // Assigned by GameManager
     public GameObject interactionPrompt;
@@ -36,7 +39,11 @@ public class CarInteraction : MonoBehaviour
         if (hasItem)
         {
             Debug.Log($"You found an item in Car_{CarID.ToString("D3")}!");
-            // Here you could call something like GameManager.Instance.CollectItem(CarID);
+            PlayerInventory inventory = FindAnyObjectByType<PlayerInventory>();
+            if (inventory != null)
+            {
+                inventory.CollectItem(itemName);
+            }
             hasItem = false;
             if (mapMarker != null) mapMarker.SetActive(false); // hide red X after found
         }

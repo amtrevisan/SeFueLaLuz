@@ -3,7 +3,7 @@ using UnityEngine;
 public class CarInteraction : MonoBehaviour
 {
     [Header("Car Settings")]
-    public int CarID; // now manually set in Inspector
+    public int CarID;
     public bool hasItem = false;
 
     [Header("Item")]
@@ -11,13 +11,12 @@ public class CarInteraction : MonoBehaviour
 
     [Header("UI & Interaction")]
     public GameObject mapMarker; // Assigned by GameManager
-    public GameObject interactionPrompt;
+    public GameObject interactionPrompt; // TODO
 
     private bool isPlayerNear = false;
 
     void Awake()
     {
-        // Removed auto-ID assignment
     }
 
     void Start()

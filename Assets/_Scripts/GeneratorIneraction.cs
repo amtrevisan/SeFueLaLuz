@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class GeneratorInteraction : MonoBehaviour
 {
-    public GameObject winMessageUI; // TODO win ui
+    public GameObject winMessageUI; // Optional win message
+    public Light[] lightsToActivate; // Add lights here in Inspector
     private bool isPlayerNear = false;
 
     void Update()
-{
-    if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
     {
-        TryActivateGenerator();
+        if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
+        {
+            TryActivateGenerator();
+        }
     }
-}
 
     void TryActivateGenerator()
     {
@@ -20,7 +21,12 @@ public class GeneratorInteraction : MonoBehaviour
         {
             Debug.Log("Generator activated! You win!");
             if (winMessageUI != null) winMessageUI.SetActive(true);
-            // Optional: light on, sound, fade, etc.
+
+            // Turn on the lights
+            foreach (Light l in lightsToActivate)
+            {
+                l.enabled = true;
+            }
         }
         else
         {
@@ -29,16 +35,18 @@ public class GeneratorInteraction : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other)
-{
-    if (other.CompareTag("Player"))
     {
-        isPlayerNear = true;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNear = true;
+        }
     }
-}
 
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             isPlayerNear = false;
+        }
     }
 }

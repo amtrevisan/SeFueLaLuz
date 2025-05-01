@@ -6,8 +6,6 @@ public class GameStartManager : MonoBehaviour
     public Light[] startingLights;
     public float lightDelay = 1f;
     public AudioSource powerDownSFX;
-    public GameObject santaPrefab;
-    public Transform santaSpawnPoint;
     public MonoBehaviour player; 
     public GameObject flashlight;
     public AudioSource creepyMusicSource;
@@ -39,10 +37,6 @@ public class GameStartManager : MonoBehaviour
         // Play power-down sound
         if (powerDownSFX != null)
             powerDownSFX.Play();
-
-        // Spawn Santa
-        if (santaPrefab != null && santaSpawnPoint != null)
-            Instantiate(santaPrefab, santaSpawnPoint.position, santaSpawnPoint.rotation);
 
         // Enable player control
         if (player != null)

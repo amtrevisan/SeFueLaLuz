@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameStartManager : MonoBehaviour
 {
     public Light[] startingLights;
-    public float lightDelay = 1f;
+    public float lightDelay = 0f;
     public AudioSource powerDownSFX;
     public MonoBehaviour player; 
     public GameObject flashlight;
@@ -42,14 +42,12 @@ public class GameStartManager : MonoBehaviour
         if (player != null)
             player.enabled = true;
 
-        // Enable flashlight
-        if (flashlight != null)
-            flashlight.SetActive(true);
+        // (No longer enabling flashlight here)
         
         // Creepy Music
         if (creepyMusicSource != null && !creepyMusicSource.isPlaying)
-        creepyMusicSource.Play();
-        }
+            creepyMusicSource.Play();
+    }
 
     public static void RestartGame()
     {

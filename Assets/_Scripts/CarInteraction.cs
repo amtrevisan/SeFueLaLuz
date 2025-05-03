@@ -29,7 +29,7 @@ public class CarInteraction : MonoBehaviour
 
         if (canHaveBattery)
         {
-            containsBattery = true;
+            containsBattery = Random.value < batteryChance;
         }
     }
 
@@ -51,8 +51,10 @@ public class CarInteraction : MonoBehaviour
             {
                 inventory.CollectItem(itemName);
             }
-
-            if (containsBattery)
+            hasItem = false;
+            if (mapMarker != null) mapMarker.SetActive(false); // hide red X after found
+        }
+        if (containsBattery)
             {
                 FlashlightToggle flashlight = FindAnyObjectByType<FlashlightToggle>();
                 if (flashlight != null)
@@ -62,10 +64,6 @@ public class CarInteraction : MonoBehaviour
                 }
                 containsBattery = false;
             }
-
-            hasItem = false;
-            if (mapMarker != null) mapMarker.SetActive(false); // hide red X after found
-        }
         else
         {
             Debug.Log($"This car (Car_{CarID.ToString("D3")}) is empty.");

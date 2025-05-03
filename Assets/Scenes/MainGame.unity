@@ -546,6 +546,7 @@ MonoBehaviour:
   CarID: 38
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &20436639 stripped
@@ -610,6 +611,7 @@ MonoBehaviour:
   CarID: 71
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &25967197 stripped
@@ -755,6 +757,7 @@ MonoBehaviour:
   CarID: 26
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &36121644 stripped
@@ -1586,6 +1589,7 @@ MonoBehaviour:
   CarID: 65
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &72700263 stripped
@@ -1677,6 +1681,7 @@ MonoBehaviour:
   CarID: 56
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &77613657 stripped
@@ -1768,6 +1773,7 @@ MonoBehaviour:
   CarID: 4
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &82118410 stripped
@@ -2048,6 +2054,7 @@ MonoBehaviour:
   CarID: 12
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!4 &98073203 stripped
@@ -2759,6 +2766,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7831931557343333843, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
+--- !u!1 &129090397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129090398}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &129090398
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129090397}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1039311132}
+  m_Father: {fileID: 204728027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &129398813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -254561256927270747, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -3372,6 +3415,7 @@ MonoBehaviour:
   CarID: 75
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &151755185 stripped
@@ -3989,6 +4033,7 @@ MonoBehaviour:
   CarID: 67
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &168707577 stripped
@@ -4496,6 +4541,7 @@ MonoBehaviour:
   CarID: 23
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &190622729 stripped
@@ -4660,6 +4706,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7820938379934614439, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
+--- !u!1 &197530269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 197530270}
+  - component: {fileID: 197530272}
+  - component: {fileID: 197530271}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &197530270
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197530269}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 204728027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &197530271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197530269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &197530272
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197530269}
+  m_CullTransparentMesh: 1
 --- !u!1 &199270755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5313182382924908295, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -4769,6 +4890,96 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3411806643244831015, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
+--- !u!1 &204728026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204728027}
+  - component: {fileID: 204728028}
+  m_Layer: 5
+  m_Name: FlashLightBattery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &204728027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204728026}
+  m_LocalRotation: {x: -0.0000000055879354, y: 0.000000022351742, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000068664565}
+  m_LocalScale: {x: 0.56249994, y: 0.5625, z: 0.56249994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 197530270}
+  - {fileID: 129090398}
+  - {fileID: 2102347705}
+  m_Father: {fileID: 879743358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -521.443, y: -0.000010743859}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &204728028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204728026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1982810782}
+  m_FillRect: {fileID: 1039311132}
+  m_HandleRect: {fileID: 1982810781}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &204746903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1801420176559855811, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -5060,6 +5271,7 @@ MonoBehaviour:
   CarID: 76
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &219891478 stripped
@@ -7608,6 +7820,7 @@ MonoBehaviour:
   CarID: 21
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &310636111 stripped
@@ -7807,6 +8020,7 @@ MonoBehaviour:
   CarID: 6
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &320315366 stripped
@@ -8168,6 +8382,7 @@ MonoBehaviour:
   CarID: 78
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &340667138 stripped
@@ -8526,6 +8741,7 @@ MonoBehaviour:
   CarID: 36
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &348359603 stripped
@@ -8590,6 +8806,7 @@ MonoBehaviour:
   CarID: 49
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &348961131 stripped
@@ -9938,6 +10155,7 @@ MonoBehaviour:
   CarID: 57
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &399856102 stripped
@@ -10002,6 +10220,7 @@ MonoBehaviour:
   CarID: 2
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &400858060 stripped
@@ -10378,6 +10597,7 @@ MonoBehaviour:
   CarID: 43
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &418375298 stripped
@@ -11005,6 +11225,7 @@ MonoBehaviour:
   CarID: 41
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &438341614 stripped
@@ -11259,6 +11480,7 @@ MonoBehaviour:
   CarID: 13
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &451414174 stripped
@@ -11651,6 +11873,7 @@ MonoBehaviour:
   CarID: 60
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &469962234 stripped
@@ -12110,6 +12333,7 @@ MonoBehaviour:
   CarID: 39
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1001 &491139371
@@ -13128,6 +13352,7 @@ MonoBehaviour:
   CarID: 17
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &529596419 stripped
@@ -13637,6 +13862,7 @@ MonoBehaviour:
   CarID: 22
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &541150774 stripped
@@ -14369,6 +14595,7 @@ MonoBehaviour:
   CarID: 80
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &572798173 stripped
@@ -15668,6 +15895,7 @@ MonoBehaviour:
   CarID: 9
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &621683486 stripped
@@ -15732,6 +15960,7 @@ MonoBehaviour:
   CarID: 5
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &625039020 stripped
@@ -17087,6 +17316,7 @@ MonoBehaviour:
   CarID: 28
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &683324125 stripped
@@ -17440,6 +17670,7 @@ MonoBehaviour:
   CarID: 1
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &699474834 stripped
@@ -17709,6 +17940,7 @@ MonoBehaviour:
   CarID: 19
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &713743801 stripped
@@ -18088,6 +18320,7 @@ MonoBehaviour:
   CarID: 53
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &726317801 stripped
@@ -23077,6 +23310,7 @@ MonoBehaviour:
   CarID: 59
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &742657857 stripped
@@ -23401,6 +23635,7 @@ MonoBehaviour:
   CarID: 16
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &752749262 stripped
@@ -23796,6 +24031,7 @@ MonoBehaviour:
   CarID: 79
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &764143793 stripped
@@ -24254,6 +24490,7 @@ MonoBehaviour:
   CarID: 18
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &779031428 stripped
@@ -25140,6 +25377,7 @@ MonoBehaviour:
   CarID: 33
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &811620577 stripped
@@ -26302,6 +26540,52 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8967984416611291600, guid: 0da71fe64bfefa243aa363342acf972a, type: 3}
+--- !u!1 &858884389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858884390}
+  - component: {fileID: 858884391}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858884390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858884389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 994845151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &858884391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858884389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176f3e4e7a568459886c2b55767e1092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: {fileID: 2092718831}
+  messageDuration: 1
 --- !u!1 &859912693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8606219315639300588, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -27457,6 +27741,7 @@ MonoBehaviour:
   CarID: 58
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &928305200 stripped
@@ -27861,6 +28146,7 @@ MonoBehaviour:
   CarID: 74
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &942796982 stripped
@@ -29025,6 +29311,7 @@ MonoBehaviour:
   CarID: 24
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1001 &985079772
@@ -29283,6 +29570,42 @@ CapsuleCollider:
   m_Height: 0.04
   m_Direction: 1
   m_Center: {x: 0.0012544381, y: 0.011464603, z: 0.001964182}
+--- !u!1 &994845150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994845151}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &994845151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994845150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.531017, y: 1.2406803, z: -25.033909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1022793817}
+  - {fileID: 1124607492}
+  - {fileID: 1293427633}
+  - {fileID: 1202727288}
+  - {fileID: 858884390}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995300937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1235390662147335454, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -29498,6 +29821,7 @@ MonoBehaviour:
   CarID: 68
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &999011702 stripped
@@ -29589,6 +29913,7 @@ MonoBehaviour:
   CarID: 72
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1002025357 stripped
@@ -29960,12 +30285,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022793814}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.531017, y: -1.2406803, z: 25.033909}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 994845151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023879442 stripped
 GameObject:
@@ -30323,6 +30648,7 @@ MonoBehaviour:
   CarID: 63
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1038261694 stripped
@@ -30406,6 +30732,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7121478629216341827, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
+--- !u!1 &1039311131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039311132}
+  - component: {fileID: 1039311134}
+  - component: {fileID: 1039311133}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1039311132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039311131}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 129090398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1039311133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039311131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1039311134
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039311131}
+  m_CullTransparentMesh: 1
 --- !u!1 &1040145840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3516947575987854701, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -30548,6 +30949,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4459864851551516593, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864851551516604, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_Name
+      value: PlayerUI
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -30566,6 +30975,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4459864851551516607, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1556889669}
+    - targetCorrespondingSourceObject: {fileID: 4459864851551516607, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 204728027}
+    - targetCorrespondingSourceObject: {fileID: 4459864851551516607, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2092718830}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
@@ -32023,6 +32438,7 @@ MonoBehaviour:
   CarID: 10
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1109806885 stripped
@@ -32141,6 +32557,7 @@ MonoBehaviour:
   CarID: 11
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1113972803 stripped
@@ -32639,12 +33056,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124607490}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.77288, y: -0.59091765, z: -14.299814}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 78.303894, y: -1.831598, z: 10.734095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 994845151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126790161 stripped
 GameObject:
@@ -32817,6 +33234,7 @@ MonoBehaviour:
   CarID: 7
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1134667339 stripped
@@ -33326,6 +33744,7 @@ MonoBehaviour:
   CarID: 20
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1001 &1156453909
@@ -33875,6 +34294,7 @@ MonoBehaviour:
   CarID: 31
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1174599202
@@ -34574,7 +34994,7 @@ MonoBehaviour:
   - {fileID: 1174599205}
   - {fileID: 131406159}
   - {fileID: 294257964}
-  lightDelay: 5
+  lightDelay: 1
   powerDownSFX: {fileID: 844126435}
   player: {fileID: 826157153}
   flashlight: {fileID: 935623954}
@@ -34587,12 +35007,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202727286}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.690207, y: -0.24565788, z: -18.144693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.8408103, y: -1.4863383, z: 6.8892155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 994845151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204491486 stripped
 GameObject:
@@ -35229,6 +35649,7 @@ MonoBehaviour:
   CarID: 81
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1232370754 stripped
@@ -35452,6 +35873,7 @@ MonoBehaviour:
   CarID: 29
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1242789567 stripped
@@ -35625,6 +36047,7 @@ MonoBehaviour:
   CarID: 52
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1256608192 stripped
@@ -35794,6 +36217,7 @@ MonoBehaviour:
   CarID: 45
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1265131493 stripped
@@ -35909,6 +36333,7 @@ MonoBehaviour:
   CarID: 34
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1001 &1270844293
@@ -36405,12 +36830,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293427632}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.1741, y: -0.5909201, z: 3.7329936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.705116, y: -1.8316004, z: 28.766903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 994845151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1293427634
 MonoBehaviour:
@@ -36565,6 +36990,7 @@ MonoBehaviour:
   CarID: 66
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1299182093 stripped
@@ -37018,6 +37444,7 @@ MonoBehaviour:
   CarID: 35
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1311571370 stripped
@@ -37455,6 +37882,7 @@ MonoBehaviour:
   CarID: 77
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1336766493 stripped
@@ -38392,6 +38820,7 @@ MonoBehaviour:
   CarID: 73
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1395309381 stripped
@@ -39574,6 +40003,7 @@ MonoBehaviour:
   CarID: 54
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1445262614 stripped
@@ -39655,6 +40085,7 @@ MonoBehaviour:
   CarID: 50
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!208 &1449847618
@@ -39838,6 +40269,7 @@ MonoBehaviour:
   CarID: 27
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1456412297 stripped
@@ -40131,6 +40563,7 @@ MonoBehaviour:
   CarID: 61
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1463548891 stripped
@@ -40276,6 +40709,7 @@ MonoBehaviour:
   CarID: 55
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1469250423 stripped
@@ -40546,6 +40980,7 @@ MonoBehaviour:
   CarID: 3
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1477274617 stripped
@@ -42494,6 +42929,7 @@ MonoBehaviour:
   CarID: 46
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1554816551 stripped
@@ -43715,6 +44151,7 @@ MonoBehaviour:
   CarID: 14
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1599965666 stripped
@@ -44936,6 +45373,7 @@ MonoBehaviour:
   CarID: 47
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1648911405 stripped
@@ -45920,6 +46358,7 @@ MonoBehaviour:
   CarID: 15
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1702131690 stripped
@@ -46139,6 +46578,7 @@ MonoBehaviour:
   CarID: 25
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1708709171 stripped
@@ -46623,6 +47063,7 @@ MonoBehaviour:
   CarID: 42
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1730089668 stripped
@@ -46893,6 +47334,7 @@ MonoBehaviour:
   CarID: 69
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1740724581 stripped
@@ -47326,6 +47768,7 @@ MonoBehaviour:
   CarID: 44
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1001 &1760069004
@@ -47638,6 +48081,7 @@ MonoBehaviour:
   CarID: 8
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1764145857 stripped
@@ -50140,7 +50584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f30599ff06f489fb03f6825e216504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryLife: 60
+  batterySlider: {fileID: 204728028}
+  batteryMax: 100
+  batteryDrainRate: 3
 --- !u!108 &1864154613 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 10800000, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1, type: 3}
@@ -50487,6 +50933,7 @@ MonoBehaviour:
   CarID: 48
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1881946000 stripped
@@ -50551,6 +50998,7 @@ MonoBehaviour:
   CarID: 62
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1884908240 stripped
@@ -50825,6 +51273,7 @@ MonoBehaviour:
   CarID: 51
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1891774805 stripped
@@ -50943,6 +51392,7 @@ MonoBehaviour:
   CarID: 32
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &1897624386 stripped
@@ -52876,6 +53326,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 847256085535641177, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
+--- !u!1 &1982810780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982810781}
+  - component: {fileID: 1982810783}
+  - component: {fileID: 1982810782}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1982810781
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982810780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2102347705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1982810782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982810780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1982810783
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982810780}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1983067961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54147,6 +54672,7 @@ MonoBehaviour:
   CarID: 37
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &2032967448 stripped
@@ -54397,6 +54923,7 @@ MonoBehaviour:
   CarID: 30
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &2044117940 stripped
@@ -55312,6 +55839,142 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2716467200037551475, guid: 6855904f450c086478bc948ffbd31164, type: 3}
+--- !u!1 &2092718829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092718830}
+  - component: {fileID: 2092718832}
+  - component: {fileID: 2092718831}
+  m_Layer: 0
+  m_Name: Interaction Prompt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2092718830
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092718829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 879743358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: -153}
+  m_SizeDelta: {x: 347.5817, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2092718831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092718829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2092718832
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092718829}
+  m_CullTransparentMesh: 1
 --- !u!1 &2093094940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -104544276627204264, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -55429,6 +56092,7 @@ MonoBehaviour:
   CarID: 70
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &2098066138 stripped
@@ -55512,6 +56176,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8021286772701523911, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
+--- !u!1 &2102347704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102347705}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2102347705
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102347704}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1982810781}
+  m_Father: {fileID: 204728027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2103503959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8447252669993523171, guid: 7cebd97a1627d46ce8fd0db40542a361, type: 3}
@@ -55868,6 +56568,7 @@ MonoBehaviour:
   CarID: 64
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &2112317637 stripped
@@ -56598,6 +57299,7 @@ MonoBehaviour:
   CarID: 40
   hasItem: 0
   itemName: 
+  containsBattery: 0
   mapMarker: {fileID: 0}
   interactionPrompt: {fileID: 0}
 --- !u!1 &2143175123 stripped
@@ -56667,9 +57369,6 @@ SceneRoots:
   - {fileID: 1024423028}
   - {fileID: 501569161}
   - {fileID: 1957191563}
-  - {fileID: 1022793817}
-  - {fileID: 1124607492}
-  - {fileID: 1293427633}
-  - {fileID: 1202727288}
   - {fileID: 844126436}
   - {fileID: 1063578608}
+  - {fileID: 994845151}

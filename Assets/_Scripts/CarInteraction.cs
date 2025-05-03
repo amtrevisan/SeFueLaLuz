@@ -5,12 +5,10 @@ public class CarInteraction : MonoBehaviour
     [Header("Car Settings")]
     public int CarID;
     public bool hasItem = false;
-    public bool canHaveBattery = true; // Optional setting to control battery spawns
-
     [Header("Item")]
     public string itemName; // "GasCan", "Fuse", or "Wrench"
     public bool containsBattery = false;
-    public float batteryChance = 1f; // 20% chance by default
+    private float batteryChance = 0.2f; // 20% chance by default
 
     [Header("UI & Interaction")]
     public GameObject mapMarker; // Assigned by GameManager
@@ -22,15 +20,11 @@ public class CarInteraction : MonoBehaviour
     {
     }
 
-    void Start()
-    {
-        if (interactionPrompt != null)
+    void Start(){
+        if (interactionPrompt != null){
             interactionPrompt.SetActive(false);
-
-        if (canHaveBattery)
-        {
-            containsBattery = Random.value < batteryChance;
         }
+        containsBattery = Random.value < batteryChance;
     }
 
     void Update()
@@ -42,33 +36,41 @@ public class CarInteraction : MonoBehaviour
     }
 
     void Interact()
+{
+    UIManager uiManager = FindAnyObjectByType<UIManager>();
+
+    if (hasItem)
     {
-        if (hasItem)
+        PlayerInventory inventory = FindAnyObjectByType<PlayerInventory>();
+        if (inventory != null)
         {
-            Debug.Log($"You found an item in Car_{CarID.ToString("D3")}!");
-            PlayerInventory inventory = FindAnyObjectByType<PlayerInventory>();
-            if (inventory != null)
-            {
-                inventory.CollectItem(itemName);
-            }
-            hasItem = false;
-            if (mapMarker != null) mapMarker.SetActive(false); // hide red X after found
+            inventory.CollectItem(itemName);
         }
-        if (containsBattery)
-            {
-                FlashlightToggle flashlight = FindAnyObjectByType<FlashlightToggle>();
-                if (flashlight != null)
-                {
-                    flashlight.RechargeBattery();
-                    Debug.Log("You also found a battery and recharged your flashlight!");
-                }
-                containsBattery = false;
-            }
-        else
-        {
-            Debug.Log($"This car (Car_{CarID.ToString("D3")}) is empty.");
+        hasItem = false;
+        if (mapMarker != null){
+            mapMarker.SetActive(false);
         }
+        if (uiManager != null){
+            uiManager.ShowMessage($"{itemName} found.");
+        } 
     }
+    else if (!hasItem && !containsBattery && uiManager != null)
+        {
+            uiManager.ShowMessage("Empty car.");
+        }
+    if (containsBattery)
+    {
+        FlashlightToggle flashlight = FindAnyObjectByType<FlashlightToggle>();
+        if (flashlight != null)
+        {
+            flashlight.RechargeBattery();
+        }
+        containsBattery = false;
+        if (uiManager != null) uiManager.ShowMessage("Flashlight battery found");
+    }
+
+    
+}
 
     void OnTriggerEnter(Collider other)
     {

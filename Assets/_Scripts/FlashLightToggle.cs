@@ -1,47 +1,53 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashlightToggle : MonoBehaviour
 {
     private Light flashlight;
-    public float batteryLife = 60f; // Battery duration in seconds
-    private float currentBattery;
+    public Slider batterySlider;
+    public float batteryMax = 100f;
+    private float batteryCurrent;
+    public float batteryDrainRate = 10f;
+    public void RechargeBattery()
+{
+    batteryCurrent = batteryMax;
+}
 
     void Start()
     {
         flashlight = GetComponent<Light>();
-        currentBattery = batteryLife;
+        batteryCurrent = batteryMax;
+        if (flashlight != null) flashlight.enabled = false;
 
-        if (flashlight != null)
+        // Initialize slider
+        if (batterySlider != null)
         {
-            flashlight.enabled = false; // Start with flashlight off
-        }
-        else
-        {
-            Debug.LogWarning("No Light component found on the flashlight.");
+            batterySlider.maxValue = batteryMax;
+            batterySlider.value = batteryCurrent;
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && currentBattery > 0)
+        if (Input.GetKeyDown(KeyCode.F) && batteryCurrent > 0)
         {
-            if (flashlight != null)
+            flashlight.enabled = !flashlight.enabled;
+        }
+
+        if (flashlight.enabled)
+        {
+            batteryCurrent -= batteryDrainRate * Time.deltaTime;
+            batteryCurrent = Mathf.Max(batteryCurrent, 0f);
+
+            if (batteryCurrent <= 0)
             {
-                flashlight.enabled = !flashlight.enabled;
+                flashlight.enabled = false;
             }
         }
 
-        // Drain battery if flashlight is on
-        if (flashlight != null && flashlight.enabled)
+        if (batterySlider != null)
         {
-            currentBattery -= Time.deltaTime;
-
-            if (currentBattery <= 0)
-            {
-                currentBattery = 0;
-                flashlight.enabled = false;
-                Debug.Log("Battery dead");
-            }
+            batterySlider.value = batteryCurrent;
         }
     }
 }

@@ -5,9 +5,12 @@ public class CarInteraction : MonoBehaviour
     [Header("Car Settings")]
     public int CarID;
     public bool hasItem = false;
+    public bool canHaveBattery = true; // Optional setting to control battery spawns
 
     [Header("Item")]
     public string itemName; // "GasCan", "Fuse", or "Wrench"
+    public bool containsBattery = false;
+    public float batteryChance = 1f; // 20% chance by default
 
     [Header("UI & Interaction")]
     public GameObject mapMarker; // Assigned by GameManager
@@ -23,6 +26,11 @@ public class CarInteraction : MonoBehaviour
     {
         if (interactionPrompt != null)
             interactionPrompt.SetActive(false);
+
+        if (canHaveBattery)
+        {
+            containsBattery = true;
+        }
     }
 
     void Update()
@@ -43,6 +51,18 @@ public class CarInteraction : MonoBehaviour
             {
                 inventory.CollectItem(itemName);
             }
+
+            if (containsBattery)
+            {
+                FlashlightToggle flashlight = FindAnyObjectByType<FlashlightToggle>();
+                if (flashlight != null)
+                {
+                    flashlight.RechargeBattery();
+                    Debug.Log("You also found a battery and recharged your flashlight!");
+                }
+                containsBattery = false;
+            }
+
             hasItem = false;
             if (mapMarker != null) mapMarker.SetActive(false); // hide red X after found
         }

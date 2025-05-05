@@ -15,11 +15,14 @@ public class EnemyChase : MonoBehaviour
     private NavMeshAgent agent;
     private bool isRepelled = false;
     private bool playerCaught = false;
+    public AudioClip jumpscareSound;
+    private AudioSource audioSource;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = chaseSpeed;
+        audioSource = GetComponent<AudioSource>();
 
         if (player == null)
         {
@@ -62,7 +65,14 @@ public class EnemyChase : MonoBehaviour
         {
             playerCaught = true;
             if (jumpscareUI != null) jumpscareUI.SetActive(true);
-            StartCoroutine(WaitForRestartInput()); // Start waiting for restart input when caught
+
+            if (audioSource != null && jumpscareSound != null)
+            {
+                audioSource.time = 1f;
+                audioSource.PlayOneShot(jumpscareSound);
+            }
+
+            StartCoroutine(WaitForRestartInput());
         }
     }
 

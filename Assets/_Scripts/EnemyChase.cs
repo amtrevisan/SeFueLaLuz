@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EnemyChase : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class EnemyChase : MonoBehaviour
     public float stopDistance = 2f;
     public Light flashlight; // Reference to the player's flashlight
     public float repelDistance = 7f;
+    public GameObject jumpscareUI;
 
     private NavMeshAgent agent;
     private bool isRepelled = false;
@@ -58,9 +61,31 @@ public class EnemyChase : MonoBehaviour
         if (distanceToPlayer <= stopDistance)
         {
             playerCaught = true;
-            Debug.Log("You got caught!");
-            // TODO: Trigger game over
+            if (jumpscareUI != null) jumpscareUI.SetActive(true);
+            StartCoroutine(WaitForRestartInput()); // Start waiting for restart input when caught
         }
+    }
+
+    IEnumerator WaitForRestartInput()
+    {
+        while (playerCaught)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                StartCoroutine(RestartGame());
+                yield break; // exit loop after starting restart
+            }
+            yield return null; // wait until the next frame
+        }
+    }
+
+    IEnumerator RestartGame()
+    {
+        Debug.Log("Scene restart");
+        if (jumpscareUI != null) jumpscareUI.SetActive(false);
+        yield return new WaitForSecondsRealtime(0.1f); // wait a bit even while time is paused
+        Time.timeScale = 1f; // reset time scale first
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // reload current scene
     }
 
     bool IsInFlashlightCone()
